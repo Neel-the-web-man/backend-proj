@@ -1,7 +1,19 @@
 import 'dotenv/config';
 import connectDB from "./db/index.js";
+import {app} from "../src/app.js"
 connectDB()
-
+.then(()=>{
+    app.on("error",(error)=>{
+        console.log("ERRR: ",error);
+        throw error;
+    })
+    app.listen(process.env.PORT|| 8000,()=>{
+        console.log(`Sever is running at port : ${process.env.PORT}`);
+    })
+})
+.catch((err)=>{
+    console.log(`Mongo db connection failed !!! sever is not running :`,err);
+})
 
 
 
@@ -40,7 +52,7 @@ const app=express();
             console.log("ERRR : ", error);
             throw error
         })
-        app.listen(process.nextTick.PORT,()=>{
+        app.listen(process.env.PORT,()=>{
             console.log(`App is listening on part ${process.env.PORT}`)
         })
     } catch(err){
