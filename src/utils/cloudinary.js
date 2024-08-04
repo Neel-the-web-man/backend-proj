@@ -34,4 +34,4 @@ import fs from "fs";
     }
 })();
 
-export {uploadOnCloudinary}
+export {uploadOnCloundinary}
