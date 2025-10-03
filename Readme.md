@@ -1,3 +1,6 @@
-# yt - website chai n code project
-- Models Link (https://app.eraser.io/workspace/YtPqZ1VogxGy1jzIDkzj)
-- bcrypt library is used to encrypt data like password also decrypt.
+Backend Project - built a semi - youtube backend.
+Implemented OAuth2 with JWT, Bcrypt, password Hashing.
+Used Cloudinary to store images.
+Used MongoDB for database.
+Used Multer - Node.js middleware for file uploads and file handling.
+Started with tweets , comments , and few different controllers , not yet completed . 
